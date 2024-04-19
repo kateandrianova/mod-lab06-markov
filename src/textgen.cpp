@@ -39,7 +39,7 @@ std::string TextGen::generateText(int count, unsigned int time_count) {
     std::string text;
     pref = first;
 
-    for (const string& elem : pref) {
+    for (const std::string& elem : pref) {
         text += elem + ' ';
     }
 
