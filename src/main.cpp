@@ -1,5 +1,6 @@
-#include <iostream>
+//Copyright [year] <Copyright Owner>
 #include "textgen.h"
+#include <iostream>
 #include <fstream>
 
 
@@ -18,8 +19,7 @@ std::string readText(const std::string& filename) {
 
     return text;
 }
-int main()
-{
+int main() {
     const int NREF = 2;
     const int MAXGEN = 1000;
 
