@@ -15,5 +15,5 @@ class TextGen {
  public:
     TextGen();
     void makeTab(std::string text, int count);
-    std::string generateText(int count);
+    std::string generateText(int count, unsigned int time_count);
 };
