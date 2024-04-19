@@ -1,8 +1,7 @@
 //Copyright [year] <Copyright Owner>
-#include "textgen.h"
 #include <iostream>
 #include <fstream>
-
+#include "textgen.h"
 
 std::string readText(const std::string& filename) {
     std::string text;
