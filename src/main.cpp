@@ -27,6 +27,6 @@ int main() {
     TextGen gen;
     gen.makeTab(intext, NREF);
 
-    std::string text = gen.generateText(MAXGEN);
+    std::string text = gen.generateText(MAXGEN, 100);
     std::cout << text;
 }
