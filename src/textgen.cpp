@@ -34,7 +34,7 @@ void TextGen::makeTab(std::string text, int count) {
     }
 }
 
-std::string TextGen::generateText(int count) {
+std::string TextGen::generateText(int count, unsigned int time_count) {
     prefix pref;
     std::string text;
     pref = first;
@@ -42,7 +42,13 @@ std::string TextGen::generateText(int count) {
     for (const std::string& elem : pref) {
         text += elem + ' ';
     }
-    std::default_random_engine gen();
+
+    unsigned int a = time(0);
+    if (time_count != 0) {
+        a = time_count;
+    }
+    std::default_random_engine gen(a);
+    
     while (text.size() < count) {
         if (statetab.find(pref) != statetab.end()) {
             const std::vector<std::string>& suffixes = statetab[pref];
