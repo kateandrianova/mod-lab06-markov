@@ -4,15 +4,14 @@
 #include <random>
 #include "textgen.h"
 
-using namespace std;
 TextGen::TextGen() {}
 
-void TextGen::makeTab(string text, int count) {
-    string* words{new string[count]};
+void TextGen::makeTab(std::string text, int count) {
+    std::string* words{new std::string[count]};
     char sep = ' ';
     int start = 0;
     int end = 0;
-    string t;
+    std::string t;
 
     for (int i = 0; i <= text.size(); i++) {
         if (text[i] == sep || i == text.size()) {
@@ -35,9 +34,9 @@ void TextGen::makeTab(string text, int count) {
     }
 }
 
-string TextGen::generateText(int count, unsigned int time_count) {
+std::string TextGen::generateText(int count, unsigned int time_count) {
     prefix pref;
-    string text;
+    std::string text;
     pref = first;
 
     for (const string& elem : pref) {
@@ -48,11 +47,11 @@ string TextGen::generateText(int count, unsigned int time_count) {
     if (time_count != 0) {
         a = time_count;
     }
-    default_random_engine gen(a);
+    std::default_random_engine gen(a);
 
     while (text.size() < count) {
         if (statetab.find(pref) != statetab.end()) {
-            const vector<string>& suffixes = statetab[pref];
+            const std::vector<std::string>& suffixes = statetab[pref];
 
             if (!suffixes.empty()) {
                 std::uniform_int_distribution<> dist(0, suffixes.size() - 1);
