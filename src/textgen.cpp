@@ -1,7 +1,8 @@
+//Copyright [year] <Copyright Owner>
 #include <iostream>
 #include <cstdlib>
-#include "textgen.h"
 #include <random>
+#include "textgen.h"
 
 TextGen::TextGen() {}
 
@@ -13,8 +14,7 @@ void TextGen::makeTab(std::string text, int count) {
     std::string t;
 
     for (int i = 0; i <= text.size(); i++) {
-        if (text[i] == sep || i == text.size())
-        {
+        if (text[i] == sep || i == text.size()) {
             end = i;
             t.append(text, start, end - start);
             words.push_back(t);
@@ -53,13 +53,10 @@ std::string TextGen::generateText(int count) {
                 text += suffixes[index] + ' ';
                 pref.pop_front();
                 pref.push_back(suffixes[index]);
-            }
-            else {
+            } else {
                 break;
             }
-        }
-        else
-        {
+        } else {
             break;
         }
     }
