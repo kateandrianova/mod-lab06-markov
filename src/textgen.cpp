@@ -48,7 +48,6 @@ std::string TextGen::generateText(int count, unsigned int time_count) {
         a = time_count;
     }
     std::default_random_engine gen(a);
-    
     while (text.size() < count) {
         if (statetab.find(pref) != statetab.end()) {
             const std::vector<std::string>& suffixes = statetab[pref];
