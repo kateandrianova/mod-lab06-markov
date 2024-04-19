@@ -24,7 +24,6 @@ void TextGen::makeTab(std::string text, int count) {
 
     first.push_back(words[0]);
     first.push_back(words[1]);
-        
     for (int i = 0; i < words->size() - count; i++) {
         prefix pref;
         for (int j = 0; j < count; j++) {
