@@ -13,26 +13,23 @@ TEST(test1, prefix) {
 }
 
 TEST(test2, prefix_suffix) {
-    std::vector<std::string>words{ "I", "am", "good", "and", "kind", "student"};
+    std::string words = "I am good and kind student";
     TextGen textgen;
     std::deque<std::string> prefix{ "I", "am" };
     textgen.makeTab(words, 2);
     std::vector<std::string> suffix{ "student" };
-    EXPECT_EQ(mark.statetab.begin()->second, suffix);
+    EXPECT_EQ(textgen.statetab.begin()->second, suffix);
 }
 
 TEST(test3, suffix) {
-    std::vector<std::string>words{ "I", "am", "good", "and", 
-      "kind", "student" };
+    std::string words = "I am good and kind student";
     TextGen textgen;
     textgen.makeTab(words, 1);
     EXPECT_EQ(textgen.generateText(10, 10), "I am good and kind student");
 }
 
 TEST(test4, chooseSuffix) {
-    std::vector<std::string>words{ "a",
-    "b", "c", "d", "e",
-    "b", "c", "a", "b", "d", "e", "a"};
+    std::string words = "a b c d e b c a b d e a";
     TextGen textgen;
     textgen.makeTab(words, 1);
     EXPECT_EQ(textgen.generateText(10, 10), "a b d e b d e a b c ");
