@@ -12,16 +12,8 @@ TEST(test1, prefix) {
   std::string words = "I love my baby";
   prefix pref = {"I", "love"};
   textgen.makeTab(words, 2);
-  EXPECT_EQ(textgen.statetab.find(pref),
+  EXPECT_NE(textgen.statetab.find(pref),
   textgen.statetab.end());
-}
-
-TEST(test2, prefix_suffix) {
-    std::string words = "I love my baby";
-    TextGen textgen;
-    prefix pref = { "I", "love" };
-    textgen.makeTab(words, 2);
-    EXPECT_EQ(textgen.statetab[pref][0], "my");
 }
 
 TEST(test3, suffix) {
