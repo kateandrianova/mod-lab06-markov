@@ -2,6 +2,11 @@
 #include <gtest/gtest.h>
 #include "textgen.h"
 
+class MarkovChainTest : public testing::Test {
+ protected:
+    MarkovChain markovChain;
+};
+
 TEST(test1, prefix) {
   TextGen textgen;
   std::string words = "I am student";
