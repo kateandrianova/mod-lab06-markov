@@ -11,8 +11,9 @@ class TextGen {
  public:
     std::map<prefix, std::vector<std::string> > statetab;
     prefix first;
-
- public:
+    void StateTable(
+        const std::map<Prefix,
+        std::vector<std::string>>&);
     TextGen();
     void makeTab(std::string text, int count);
     std::string generateText(int count, unsigned int time_count);
