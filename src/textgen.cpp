@@ -17,7 +17,7 @@ void TextGen::makeTab(const std::string& text, int count) {
         if (text[i] == sep || i == text.size()) {
             end = i;
             t.append(text, start, end - start);
-            words->append(t);
+            words.push_back(t);
             start = end + 1;
         }
     }
