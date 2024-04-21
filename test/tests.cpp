@@ -10,7 +10,7 @@ class TextGenTest : public testing::Test {
 TEST(test1, prefix) {
   TextGen textgen;
   std::string words = "I am student";
-  prefix pref = {"I", "am"};
+  Prefix pref = {"I", "am"};
   textgen.makeTab(words, 2);
   EXPECT_EQ(textgen.statetab[pref][0], "student");
 }
