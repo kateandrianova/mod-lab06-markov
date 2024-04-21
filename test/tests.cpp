@@ -4,7 +4,7 @@
 
 TEST(test1, prefix) {
   TextGen textgen;
-  std::string words = "I am student"};
+  std::string words = "I am student";
   std::deque<std::string> prefix;
   prefix.push_back("I");
   prefix.push_back("am");
