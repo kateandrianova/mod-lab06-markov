@@ -9,7 +9,7 @@ TEST(test1, prefix) {
   prefix.push_back("I");
   prefix.push_back("am");
   textgen.makeTab(words, 2);
-  EXPECT_EQ(prefix, textgen.first);
+  EXPECT_EQ(textgen.statetab[prefix][0], "am");
 }
 
 TEST(test2, prefix_suffix) {
