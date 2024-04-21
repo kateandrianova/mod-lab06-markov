@@ -6,9 +6,9 @@
 #include <map>
 #include <vector>
 
+typedef std::deque<std::string> prefix;
 class TextGen {
  public:
-    typedef std::deque<std::string> prefix;
     std::map<prefix, std::vector<std::string> > statetab;
     prefix first;
 
