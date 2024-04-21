@@ -11,8 +11,8 @@ TEST(test1, prefix) {
   TextGen textgen;
   std::string words = "I am student";
   prefix pref;
-  prefix.push_back("I");
-  prefix.push_back("am");
+  pref.push_back("I");
+  pref.push_back("am");
   textgen.makeTab(words, 2);
   EXPECT_EQ(textgen.statetab[pref][0], "student");
 }
