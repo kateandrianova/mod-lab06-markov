@@ -22,7 +22,8 @@ TEST(test2, prefix_suffix) {
 }
 
 TEST(test3, suffix) {
-    std::vector<std::string>words{ "I", "am", "good", "and", "kind", "student" };
+    std::vector<std::string>words{ "I", "am", "good", "and", 
+      "kind", "student" };
     TextGen textgen;
     textgen.makeTab(words, 1);
     EXPECT_EQ(textgen.generateText(10, 10), "I am good and kind student");
