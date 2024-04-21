@@ -6,8 +6,8 @@
 
 TextGen::TextGen() {}
 
-void TextGen::makeTab(std::string text, int count) {
-    std::string* words{new std::string[count]};
+void TextGen::makeTab(const std::string& text, int count) {
+    std::vector<std::string> words;
     char sep = ' ';
     int start = 0;
     int end = 0;
