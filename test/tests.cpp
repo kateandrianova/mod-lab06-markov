@@ -46,8 +46,8 @@ TEST(test5, text) {
     };
     TextGen textgen;
     typedef std::deque<std::string> prefix;
-    prefix pre{ "a" };
-    mark.statetab = state;
-    mark.first = pref;
+    prefix pref{ "a" };
+    textgen.statetab = state;
+    textgen.first = pref;
     EXPECT_EQ(textgen.generateText(10, 10), "b B ");
 }
