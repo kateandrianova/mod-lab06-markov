@@ -4,22 +4,22 @@
 
 TEST(test1, prefix) {
   TextGen textgen;
-  std::string words = "I love my baby";
-  prefix pref = {"I", "love"};
+  std::string words = "I am student";
+  prefix pref = {"I", "am"};
   textgen.makeTab(words, 2);
   EXPECT_EQ(textgen.statetab.find(pref),
   textgen.statetab.end());
 }
 
 TEST(test3, suffix) {
-    std::string words = "I love my baby";
+    std::string words = "I am student";
     TextGen textgen;
     textgen.makeTab(words, 2);
     EXPECT_EQ(textgen.generateText(10, 52), "I love my");
 }
 
 TEST(test4, chooseSuffix) {
-    std::string words = "I love my baby, I love my home, I love my eat";
+    std::string words = "I am person, I am student, I am not a programist";
     TextGen textgen;
     textgen.makeTab(words, 2);
     EXPECT_EQ(textgen.generateText(24, 302), "I love my eat");
