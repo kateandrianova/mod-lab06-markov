@@ -65,6 +65,10 @@ std::string TextGen::generateText(int count, unsigned int time_count) {
             break;
         }
     }
-
+    
+    if (text.size() > count) {
+        text = text.substr(0, count);
+    }
+    
     return text;
 }
