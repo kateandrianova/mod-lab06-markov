@@ -12,7 +12,7 @@ class TextGen {
     std::map<prefix, std::vector<std::string> > statetab;
     prefix first;
     void StateTable(
-        const std::map<Prefix,
+        const std::map<prefix,
         std::vector<std::string>>&);
     TextGen();
     void makeTab(std::string text, int count);
