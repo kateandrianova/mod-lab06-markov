@@ -2,9 +2,9 @@
 #include <gtest/gtest.h>
 #include "textgen.h"
 
-class MarkovChainTest : public testing::Test {
+class TextGenTest : public testing::Test {
  protected:
-    MarkovChain markovChain;
+    TextGen textgen;
 };
 
 TEST(test1, prefix) {
