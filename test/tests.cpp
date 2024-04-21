@@ -9,33 +9,33 @@ class TextGenTest : public testing::Test {
 
 TEST(test1, prefix) {
   TextGen textgen;
-  std::string words = "I am student";
-  prefix pref = {"I", "am"};
+  std::string words = "I love my baby";
+  prefix pref = {"I", "love"};
   textgen.makeTab(words, 2);
   EXPECT_EQ(textgen.statetab.find(pref),
   textgen.statetab.end());
 }
 
 TEST(test2, prefix_suffix) {
-    std::string words = "I am good and kind student";
+    std::string words = "I love my baby";
     TextGen textgen;
-    prefix pref = { "I", "am" };
+    prefix pref = { "I", "love" };
     textgen.makeTab(words, 2);
-    EXPECT_EQ(textgen.statetab[pref][0], "good");
+    EXPECT_EQ(textgen.statetab[pref][0], "my");
 }
 
 TEST(test3, suffix) {
-    std::string words = "I am good and kind student";
+    std::string words = "I love my baby";
     TextGen textgen;
     textgen.makeTab(words, 2);
-    EXPECT_EQ(textgen.generateText(9, 123), "I am good");
+    EXPECT_EQ(textgen.generateText(9, 123), "I love my");
 }
 
 TEST(test4, chooseSuffix) {
-    std::string words = "a b c d e b c a b d e a";
+    std::string words = "I love my baby, I love my home, I love my eat";
     TextGen textgen;
     textgen.makeTab(words, 2);
-    EXPECT_EQ(textgen.generateText(14, 350), "d e a");
+    EXPECT_EQ(textgen.generateText(14, 302), "I love my eat");
 }
 
 TEST(test5, text) {
