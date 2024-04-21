@@ -72,8 +72,8 @@ std::string TextGen::generateText(int count, unsigned int time_count) {
 }
 
 void TextGen::StateTable(
-    const std::map<Prefix,
-    std::vector<std::string>>& newStateTable) {
+    const std::map<prefix,
+    std::vector<std::string>>& newstatetab) {
     statetab = newstatetab;
 
     if (!statetab.empty()) {
