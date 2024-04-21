@@ -2,15 +2,10 @@
 #include <gtest/gtest.h>
 #include "textgen.h"
 
-class TextGenTest : public testing::Test {
- protected:
-    TextGen textgen;
-};
-
 TEST(test1, prefix) {
   TextGen textgen;
   std::string words = "I am student";
-  Prefix pref = {"I", "am"};
+  prefix pref = {"I", "am"};
   textgen.makeTab(words, 2);
   EXPECT_EQ(textgen.statetab[pref][0], "student");
 }
