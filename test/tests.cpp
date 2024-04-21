@@ -4,12 +4,12 @@
 
 TEST(test1, prefix) {
   TextGen textgen;
-  std::vector<std::string>words{ "I", "am", "student"};
+  std::string words = "I am student"};
   std::deque<std::string> prefix;
   prefix.push_back("I");
   prefix.push_back("am");
   textgen.makeTab(words, 2);
-  EXPECT_EQ(prefix, mark.first);
+  EXPECT_EQ(prefix, textgen.first);
 }
 
 TEST(test2, prefix_suffix) {
