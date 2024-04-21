@@ -15,6 +15,6 @@ class TextGen {
         const std::map<prefix,
         std::vector<std::string>>&);
     TextGen();
-    void makeTab(std::string text, int count);
+    void makeTab(const std::string& text, int count);
     std::string generateText(int count, unsigned int time_count);
 };
