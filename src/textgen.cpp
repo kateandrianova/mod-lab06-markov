@@ -70,3 +70,14 @@ std::string TextGen::generateText(int count, unsigned int time_count) {
     }
     return text;
 }
+
+void TextGen::StateTable(
+    const std::map<Prefix,
+    std::vector<std::string>>& newStateTable) {
+    statetab = newstatetab;
+
+    if (!statetab.empty()) {
+        auto item = statetab.begin();
+        first = item->first;
+    }
+}
