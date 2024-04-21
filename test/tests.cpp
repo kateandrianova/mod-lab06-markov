@@ -14,15 +14,15 @@ TEST(test1, prefix) {
 TEST(test3, suffix) {
     std::string words = "I am student";
     TextGen textgen;
-    textgen.makeTab(words, 2);
-    EXPECT_EQ(textgen.generateText(10, 52), "I love my");
+    textgen.makeTab(words, 1);
+    EXPECT_EQ(textgen.generateText(5, 52), "I love my");
 }
 
 TEST(test4, chooseSuffix) {
     std::string words = "I am person, I am student, I am not a programist";
     TextGen textgen;
     textgen.makeTab(words, 2);
-    EXPECT_EQ(textgen.generateText(24, 302), "I love my eat");
+    EXPECT_EQ(textgen.generateText(9, 302), "I love my eat");
 }
 
 TEST(test5, text) {
